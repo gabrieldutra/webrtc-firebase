@@ -1,0 +1,67 @@
+.main-container {
+  min-height: 100vh;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.description {
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+.title,
+.description {
+  text-align: center;
+}
+
+.main {
+  padding: 5rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.illustration {
+  margin-bottom: 40px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  font-family: "Syne Mono", monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin: 80px 10px;
+}
+
+video {
+  width: 40vw;
+  height: 30vw;
+  margin: 2rem;
+  background: #2c3e50;
+}
+
+.videos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#homeGreeting {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}

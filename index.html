@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="./style.css" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebRTC - Meet</title>
+  </head>
+
+  <body>
+    <div class="main-container">
+      <main class="main">
+        <div id="homeGreeting">
+          <img
+            class="illustration"
+            alt="Videocall illustration"
+            width="400"
+            src="img/call.svg"
+          />
+          <h1 class="title">Bem vindo ao Meet!</h1>
+          <p class="description">Ative sua câmera para começar</p>
+        </div>
+        <button id="botaoAtivarCamera" class="btn btn-primary">
+          Ativar camera
+        </button>
+
+        <section id="conteudo" hidden>
+          <div class="row align-items-start">
+            <div class="col">
+              <h3>Você</h3>
+              <video id="cameraLocal" autoplay playsinline></video>
+            </div>
+            <div class="col">
+              <h3>Participante</h3>
+              <video id="cameraParticipante" autoplay playsinline></video>
+            </div>
+          </div>
+
+          <div class="container flex">
+            <div class="row align-items-start">
+              <div class="col">
+                <h2>Criar nova chamada</h2>
+                <button id="botaoDeChamada" class="btn btn-secondary" disabled>
+                  Fazer chamada
+                </button>
+              </div>
+              <div class="col">
+                <h2>Junte-se à chamada</h2>
+                <p>
+                  Utilize o código a seguir em uma nova aba ou aparelho para
+                  participar da chamada
+                </p>
+                <form class="row g-3" onsubmit="return false;">
+                  <div class="col-auto">
+                    <label for="inputPassword2" class="visually-hidden"
+                      >Password</label
+                    >
+                    <input
+                      class="form-control"
+                      id="codigoChamada"
+                      placeholder="Código da chamada"
+                    />
+                  </div>
+                  <div class="col-auto">
+                    <button
+                      id="botaoAtenderChamada"
+                      class="btn btn-secondary"
+                      disabled
+                    >
+                      Answer
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <div class="col">
+                <h2>Finalizar chamada</h2>
+                <button id="botaoDesligar" class="btn btn-secondary" disabled>
+                  Finalizar
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="/js/event.js"></script>
+  </body>
+</html>

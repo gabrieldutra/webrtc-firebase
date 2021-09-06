@@ -1,0 +1,13 @@
+{
+  "name": "trabalho-final-redes-webrtc",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "firebase": "^8.9.0"
+  },
+  "devDependencies": {
+    "vite": "^2.0.5"
+  }
+}

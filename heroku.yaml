@@ -1,0 +1,5 @@
+build:
+  docker:
+    web: Dockerfile
+run:
+  web: sh -c "/docker-entrypoint.d/20-envsubst-on-templates.sh && nginx -g 'daemon off;'"
